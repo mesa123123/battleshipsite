@@ -1,4 +1,4 @@
-/* jslint evil: true */
+/* jslint evil: true, esversion: 6 */
 
 // This grid will represent the sea where the game will take place
 var grid = new Array(7);
@@ -27,10 +27,10 @@ var playerAlive = true;
 function fireRound(){
   var selection = document.getElementById("fireConsole").value;
   selection--;
-  if( playerAlive == true && (isNaN(selection) || grid[selection] == -1 || selection < 0 || selection > 6) ){
+  if( shipAlive && playerAlive && (isNaN(selection) || grid[selection] == -1 || selection < 0 || selection > 6) ){
     document.getElementById("intelConsole").innerHTML = "Intel: Invalid Selection, Make another one";
   }
-  else if ( playerAlive == true ){
+  else if ( playerAlive && shipAlive){
     i--;
     //Check the selection is valid and the User isn't bombing the same place
     //Case: Missed shot else: hit
@@ -41,7 +41,7 @@ function fireRound(){
       document.getElementById("Result").innerHTML = "Intel: Direct hit! You've got the bastard!";
       shipAlive = false;
     }
-    if(i > 0 && shipAlive == true){
+    if(i > 0){
       //Messages that inform user of ship status; this creates dramatic effect
       switch(i){
         case 3:
@@ -79,3 +79,7 @@ function result(){
     document.getElementById("intelConsole").innerHTML = ("Intel: Bloody well done there! Were safe for another day!");
   }
 }
+
+module.exports = {
+  compSelect: compSelect,
+};
