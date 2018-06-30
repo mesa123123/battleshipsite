@@ -10,7 +10,7 @@ function compSelect(min, max){
 var shipPlace = compSelect(1,7);
 // Computer Places ship within the sea
 for(var i = 0; i < grid.length; i++){
-  if(i == compSelect){
+  if(i == compSelect){ //dick
     grid[i] = 1;
   }
   else{
