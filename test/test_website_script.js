@@ -1,5 +1,5 @@
 /*jslint esversion: 6*/
-//test1
+
 var compSelect = require('../src/website_script').compSelect;
 
 function test_comp_Select(){
