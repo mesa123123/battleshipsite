@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Java Script Stuff</title>
+    <title>BattleShip</title>
     <link rel="stylesheet" type="text/css" href="website_style.css">
   </head>
   <body>
     <div border="5px" id="captainConsole">
       <table id="intelTerminal" class="cptnCnsl">
-        <tr>
-          <td id="intelLabel" class="cptnCnsl">INTEL</td>
+        <tr class="terminalRow">
+          <td id="intelLabel">INTEL</td>
         </tr>
-        <tr>
-          <td id="intelConsole" class="cptnCnsl">Radar has picked up an enemy ship;  Where should we fire?</td>
+        <tr class="terminalRow">
+          <td id="intelConsole">Radar has picked up an enemy ship;  Where should we fire?</td>
         </tr>
-        <tr>
-            <td><input type="text" class="cptnCnsl" id="fireConsole"></td>
+      </table>
+      <table id-"captainTerminal" class="cpatnCnsl">
+        <tr class="terminalRow">
+            <input type="text" id="fireConsole">
         </tr>
-        <tr>
-          <td><button id="fireButton" class="cptnCnsl" onclick="fireRound()">Fire!</button></td>
+        <tr class="terminalRow">
+          <td><button id="fireButton" onclick="fireRound()">Fire!</button></td>
         </tr>
-        <tr>
-            <td><p id="Result" class="cptnCnsl"></p></td>
+        <tr class="terminalRow">
+            <td><p id="Result" class="cptnCnsl">What shall we do with a drunken sailor?</p></td>
         </tr>
       </table>
     </div>
-    <script src="website_script.js"></script>
+    <script src="scripts/website_script.js"></script>
   </body>
 </html>
