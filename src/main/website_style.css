@@ -23,6 +23,13 @@ body {
   color: #b4adad;
 }
 
+#intelTerminal {
+  display: table-cell;;
+}
+
+.terminalRow {
+  width: inherit;
+}
 
 #intelLabel {
   postition: absolute;
@@ -36,13 +43,26 @@ body {
   border: 1px solid #212322;
   border-radius: 5px;
   margin: 0px, 10px, 0px, 10px;
+  width: max-content;
   background-color: black;
   color: #ff0000;
 }
 
-#fireBorder {
-  margin: 0px 12px 0px 12px;
+#captainTerminal {
+  display: table-cell;
 }
+
+#fireConsole{
+  background-color: #b4adad;
+  border: none;
+  font-family: inherit;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  color: #000000;
+  text-align: center;
+}
+
 
 #fireButton {
   background-color: #1e990f;
@@ -53,23 +73,17 @@ body {
   margin-left: 45%;
   margin-right: 45%;
   width: 10%;
-  margin-bottom: 10px;
-}
-
-#fireConsole{
-  background-color: #b4adad;
-  border: none;
-  font-family: inherit;
-  margin-left: 40%;
-  margin-right: 40%;
-  width: 20%;
-  color: #000000;
 }
 
 #Result {
-  padding-left: 5px;
-  padding-right: 5px;
+  white-space: nowrap;
+  margin-top:7%;
+  margin-bottom: 1%;
   border-radius: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 100%;
   background-color: black;
   color: #ff0000;
+  text-align: center;
 }
