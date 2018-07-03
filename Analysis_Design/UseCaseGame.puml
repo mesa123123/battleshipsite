@@ -1,0 +1,7 @@
+@startuml
+actor User
+rectangle system {
+User -left- (Select Square to Fire \n [with mouseover])
+User -left- (Fire At Square Upon Click)
+}
+@enduml
