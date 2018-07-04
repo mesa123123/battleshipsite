@@ -5,10 +5,99 @@
 }
 
 body {
-  background-image: url("../resources/board.jpg");
-  background-size: cover;
+  background-color: #b4adad;
 }
 
+#title {
+  font-family: quantico;
+  text-align: center;
+  border: 5px solid #212232;
+  border-radius: 5px;
+}
+
+#battleField{
+  background-color: #000000;
+  display: inline-row;
+}
+
+#battlegrid {
+  background-color: #000000;
+  position: absolute;
+  vertical-align: middle;
+  display: inline-table;
+  height 80%;
+}
+
+.col_1 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_2 {
+  height: 10%;
+  width: 10%;
+  overflow: hidden;
+}
+
+.col_3 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_4 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_5 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_6 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_7 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_8 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_9 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+.col_10 {
+  height: 10%;
+  width: 10%;
+  left: 0%;
+  overflow: hidden;
+}
+
+/* Terminal Styling */
 #captainConsole {
   position: absolute;
   background-color: #424544;
