@@ -5,106 +5,79 @@
 }
 
 body {
-  background-color: #b4adad;
+  background-color: #000000;
 }
 
 #title {
+  background-color: #424544;
+  color: #b4adad;
   font-family: quantico;
   text-align: center;
-  border: 5px solid #212232;
-  border-radius: 5px;
+  border: 0.3em solid #212232;
+  border-radius: 0.3em;
+  max-height: 18%;
 }
 
-#battleField{
-  background-color: #000000;
+#battleGrid {
+  background: url("../resources/rader.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   display: inline-row;
-}
-
-#battlegrid {
-  background-color: #000000;
   position: absolute;
-  vertical-align: middle;
-  display: inline-table;
-  height 80%;
+  height: 50%;
+  width: 95%;
+  left: 2%;
+  right: 2%;
+  border-radius: 0.2em;
+  border: 0.1em solid #212232;
 }
 
-.col_1 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
+.battlerow>td {
+  background-color: #273029;
+  opacity: 0.5;
+  border-radius: 0.1em;
+  height: 5%;
+  width: 5%;
   overflow: hidden;
+  display: table-cell;
+  border: 0.1em solid #b4adad;
 }
 
-.col_2 {
-  height: 10%;
-  width: 10%;
-  overflow: hidden;
+.battlerow>td:hover {
+  border: 0.1em solid #1e990f;
+  cursor: crosshair;
 }
 
-.col_3 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
+.battlerow>td:active {
+  border: 0.1em solid red;
+  background-color: red;
 }
 
-.col_4 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
+.battlerow>td:{
+  border: 0.1em solid #e26d18;
+  background-color: #e26d18;
 }
 
-.col_5 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
-}
-
-.col_6 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
-}
-
-.col_7 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
-}
-
-.col_8 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
-}
-
-.col_9 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
-}
-
-.col_10 {
-  height: 10%;
-  width: 10%;
-  left: 0%;
-  overflow: hidden;
-}
-
-/* Terminal Styling */
-#captainConsole {
+/*
+*
+*
+Terminal Styling
+*
+*
+*
+*/
+#intelTerminal {
   position: absolute;
   background-color: #424544;
-  border: 3px solid #1e990f;
-  border-radius: 5px;
-  bottom: 5%;
+  border: 0.2em solid #1e990f;
+  border-radius: 0.2em;
+  bottom: 2%;
   right: 2%;
+  left: 2%;
+  min-height: 25%;
+  max-width: 650px;
+  width: 94%;
   font-family: quantico;
 }
 
@@ -112,34 +85,27 @@ body {
   color: #b4adad;
 }
 
-#intelTerminal {
-  display: table-cell;;
+.terminalRow {
+  display: vertical;
 }
 
-.terminalRow {
-  width: inherit;
-}
 
 #intelLabel {
   postition: absolute;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.2em;
+  height: 10%;
 }
 
 #intelConsole {
-  padding-left: 5px;
-  padding-right: 5px;
-  border: 1px solid #212322;
-  border-radius: 5px;
-  margin: 0px, 10px, 0px, 10px;
-  width: max-content;
+  width: 96%;
+  padding: 0% 2% 0% 2%;
+  border-radius: 0.2em;
   background-color: black;
+  text-align: center;
   color: #ff0000;
 }
 
-#captainTerminal {
-  display: table-cell;
-}
 
 #fireConsole{
   background-color: #b4adad;
@@ -147,32 +113,44 @@ body {
   font-family: inherit;
   margin-left: 10%;
   margin-right: 10%;
-  width: 80%;
+  min-width: 80%;
   color: #000000;
   text-align: center;
 }
 
 
-#fireButton {
+#rowButton {
   background-color: #1e990f;
   border: none;
   color: black;
+  min-height: 2em;
+  text-align: center;
   font-family: inherit;
-  position: absolute;
-  margin-left: 45%;
-  margin-right: 45%;
+  font-size: 1em;
+  margin-left: 30%;
+  margin-right: 5%;
   width: 10%;
 }
 
-#Result {
-  white-space: nowrap;
-  margin-top:7%;
-  margin-bottom: 1%;
-  border-radius: 5px;
-  padding-left: 2%;
-  padding-right: 2%;
-  width: 100%;
-  background-color: black;
-  color: #ff0000;
+#columnButton {
+  background-color: #1e990f;
+  border: none;
+  color: black;
+  min-height: 2.3em;
+  font-size: 0.9em;
+  font-family: inherit;
+  width: 10%;
+}
+
+#groupButton {
+  background-color: #1e990f;
+  border: none;
+  color: black;
+  min-height: 2em;
   text-align: center;
+  font-family: inherit;
+  font-size: 1em;
+  margin-left: 5%;
+  margin-right: 20%;
+  width: 10%;
 }
