@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor User
+rectangle System {
+User --> (Attack)
+User --> (Attack Type)
+(Attack) --|> (Attack Type) : depends on
+User <- (Inform Defences)
+}
+@enduml

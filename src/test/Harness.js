@@ -1,13 +1,24 @@
 
 var tests = [];
-tests.push(require('./test_website_script').test_comp_Select);
-tests.push(require('./gridTest').test_create_grid);
+tests.push([require('./gridTest').test_grid_length, "Test_Grid_Length"]);
+tests.push([require('./gridTest').test_grid_vectorlength,"Test_Vector_Length"]);
+tests.push([require('./gridTest').test_gridIsPopulated, "test_gridIsPopulated"]);
 
 
 function printResults(){
-  for (var member in tests){
-    var result = tests[member]();
-    console.log(result);
+  var fails = "||";
+  for (var i = 0; i < tests.length; i++){
+    var result = tests[i][0]();
+    if (result == false){
+      fails = fails + tests[i][1] + "|";
+    }
+  }
+  if(fails.length == 2){
+    return "All Passed";
+  }
+  else{
+    return fails;
   }
 }
-printResults();
+
+console.log(printResults());

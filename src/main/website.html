@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -141,14 +142,12 @@
           <td><input type="text" id="fireConsole"></td>
       </tr>
       <tr class="terminalRow">
-        <td  id="ammoSelection"><button id="rowButton" onclick="fireRound()">Row</button>
-        <button id="columnButton" onclick="fireRound()">Column</button>
-        <button id="groupButton" onclick="fireRound()">Group</button></td>
-      </tr>
-      <tr class="terminalRow">
-        <td><button id="fireButton" onclick="fireRound()">Fire!</button></td>
+        <td  id="ammoSelection"><button id="rowButton" onclick="ammoRow()">Row</button>
+        <button id="columnButton" onclick="fireRound()" onclick="ammoColumn()">Column</button>
+        <button id="groupButton" onclick="fireRound()" onclick="ammoGroup()">Group</button></td>
       </tr>
     </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/website_script.js"></script>
   </body>
 </html>

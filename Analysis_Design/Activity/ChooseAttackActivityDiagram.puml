@@ -1,0 +1,41 @@
+@startuml
+(*) -right-> "Select Co-ordinate to bomb"
+-right-> "Player Fires"
+--> "Something on the screen will show this, maybe an\n animation? I dont know yet"
+-left-> "Co-ordinates added to an array of shot targets"
+partition Calculation_of_Shot {
+--> "Attack Type is Checked"
+--> === B1 ===
+--> "Attack Type Row"
+--> "Co-ordinates for \n row are added to \nthe array"
+--> === B2 ===
+=== B1 === --> "Attack Type Columm"
+--> "Co-ordinates for \n column are added to \nthe array"
+--> === B2 ===
+=== B1 === --> "Attack Type Group"
+--> "Co-ordinates for \n the group are added to \nthe array"
+--> === B2 ===
+-left-> "For all Coordinates in array \nCheck Value"
+if "all coordinates checked?" then
+--> [false] "Check next\n co-ordinate"
+  if "Co-ordinate Value" then
+  --> [0] "Miss"
+  --> "Report Miss"
+  --> "For all Coordinates in array \nCheck Value"
+  else
+  --> [-1] "reshoot"
+  --> "For all Coordinates in array \nCheck Value"
+  else
+  --> [1] "hit"
+  --> "Report Hit"
+  --> "For all Coordinates in array \nCheck Value"
+  endif
+else
+--> [true] "return array to grid\nto change values"
+endif
+}
+partition gameGrid {
+  --> chance values from the array\n into the gameGRid
+}
+--> (*)
+@enduml
