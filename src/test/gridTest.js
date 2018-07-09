@@ -1,6 +1,5 @@
 var createGrid = require('../main/scripts/Battlefield/grid').createGrid;
 
-
 function test_grid_length(){
     var testGrid = createGrid();
     if(testGrid.length == 10){

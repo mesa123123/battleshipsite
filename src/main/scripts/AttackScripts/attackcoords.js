@@ -1,6 +1,9 @@
+/*
+* A function that takes the Co-ordinates from the page and stores them in an
+* array.
+*/
 
-/* A function that will deliver the bombed coordinates to be validated against the grid */
-function findTheTargets(grid, userSelection, attacksetting){
+function createTargets(grid, userSelection, attacksetting){
     var shotsFired = [];
     if (attacksetting == "column"){
         for (var i = 0; i < 10; i++){
@@ -22,4 +25,9 @@ function findTheTargets(grid, userSelection, attacksetting){
         shotsFired.push([userSelection.x, userSelection.y -1]);
     }
     return shotsFired;
+}
+
+
+module.exports = {
+  createTargets: createTargets,
 }
