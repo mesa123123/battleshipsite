@@ -1,8 +1,8 @@
-var createGrid = require('../main/scripts/Battlefield/grid').createGrid;
+var Grid = require('../main/scripts/Battlefield/grid').Grid;
 
 function test_grid_length(){
-    var testGrid = createGrid();
-    if(testGrid.length == 10){
+    var testGrid = new Grid();
+    if(testGrid.grid.length == 10){
       results = true;
     }
     else {
@@ -12,10 +12,10 @@ function test_grid_length(){
 }
 
 function test_gridvector_length(){
-  var testGrid = createGrid();
+  var testGrid =  new Grid();
   result = true;
-  for(var i = 0; i < testGrid.length; i++){
-    if(testGrid[i].length != 10){
+  for(var i = 0; i < testGrid.grid.length; i++){
+    if(testGrid.grid[i].length != 10){
       result = false;
     }
   }
@@ -23,8 +23,8 @@ function test_gridvector_length(){
 }
 
 function test_gridIsPopulated() {
-    var testGrid = createGrid();
-    return  testGrid[Math.floor(Math.random() *10)][Math.floor(Math.random() *10)] == 0;
+    var testGrid = new Grid();
+    return  testGrid.grid[Math.floor(Math.random() *10)][Math.floor(Math.random() *10)] == 0;
 }
 
 module.exports = {

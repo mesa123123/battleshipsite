@@ -1,3 +1,4 @@
-var createGrid = require('./BattleField/grid').createGrid;
+var createGrid = require('./BattleField/grid').Grid;
 var createTargets = require('./AttackScripts/attackcoords').createTargets;
-var attackStyle = require('./AttackScripts/attacktypes').attackStyle;
+var userSelection = require('./UserCommands/Selection').userSelection;
+var

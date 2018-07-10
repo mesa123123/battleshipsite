@@ -139,15 +139,12 @@
         <td id="intelConsole">Radar has picked up an enemy ship;  Where should we fire?</td>
       </tr>
       <tr class="terminalRow">
-          <td><input type="text" id="fireConsole"></td>
-      </tr>
-      <tr class="terminalRow">
-        <td  id="ammoSelection"><button id="rowButton" onclick="ammoRow()">Row</button>
-        <button id="columnButton" onclick="fireRound()" onclick="ammoColumn()">Column</button>
-        <button id="groupButton" onclick="fireRound()" onclick="ammoGroup()">Group</button></td>
+        <td  id="ammoSelection"><button class="attackButton" onclick="ammoRow()">Row</button>
+        <button class="attackButton" onclick="fireRound()" onclick="ammoColumn()">Column</button>
+        <button class="attackButton" onclick="fireRound()" onclick="ammoGroup()">Group</button></td>
       </tr>
     </table>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="scripts/website_script.js"></script>
   </body>
 </html>

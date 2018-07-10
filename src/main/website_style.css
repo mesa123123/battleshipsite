@@ -13,10 +13,14 @@ body {
   color: #b4adad;
   font-family: quantico;
   text-align: center;
+  font-size: 2.5vh;
   border: 0.3em solid #212232;
   border-radius: 0.3em;
   max-height: 18%;
+  min-height: 1%;
 }
+
+
 
 #battleGrid {
   background: url("../resources/rader.jpg");
@@ -101,56 +105,24 @@ Terminal Styling
   width: 96%;
   padding: 0% 2% 0% 2%;
   border-radius: 0.2em;
-  background-color: black;
+  background-color: #000000;
   text-align: center;
   color: #ff0000;
 }
 
+#ammoSelection {
+  padding-left: 30%;
+}
 
-#fireConsole{
-  background-color: #b4adad;
+.attackButton {
+  background-color: #1e990f;
   border: none;
-  font-family: inherit;
-  margin-left: 10%;
-  margin-right: 10%;
-  min-width: 80%;
   color: #000000;
-  text-align: center;
-}
-
-
-#rowButton {
-  background-color: #1e990f;
-  border: none;
-  color: black;
   min-height: 2em;
-  text-align: center;
   font-family: inherit;
-  font-size: 1em;
-  margin-left: 30%;
+  font-size: 3vw, 3vh;
+  margin-left: 0%;
   margin-right: 5%;
-  width: 10%;
-}
-
-#columnButton {
-  background-color: #1e990f;
-  border: none;
-  color: black;
-  min-height: 2.3em;
-  font-size: 0.9em;
-  font-family: inherit;
-  width: 10%;
-}
-
-#groupButton {
-  background-color: #1e990f;
-  border: none;
-  color: black;
-  min-height: 2em;
-  text-align: center;
-  font-family: inherit;
-  font-size: 1em;
-  margin-left: 5%;
-  margin-right: 20%;
-  width: 10%;
+  width: 20%;
+  display: inline-flex;
 }
