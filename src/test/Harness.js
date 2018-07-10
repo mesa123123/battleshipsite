@@ -3,6 +3,7 @@ var tests = [];
 tests.push([require('./gridTest').test_grid_length, "Test_Grid_Length"]);
 tests.push([require('./gridTest').test_grid_vectorlength,"Test_Vector_Length"]);
 tests.push([require('./gridTest').test_gridIsPopulated, "test_gridIsPopulated"]);
+tests.push([require('./UserSelectionTest').testSimpleSelect, "testSimpleSelect"]);
 
 
 function printResults(){

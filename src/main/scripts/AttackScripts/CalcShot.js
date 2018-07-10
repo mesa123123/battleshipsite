@@ -3,13 +3,13 @@
 * array.
 */
 
-function createTargets(grid, userSelection, attacksetting){
+function createTargets(grid, userSelection){
     var shotsFired = [];
-    if (attacksetting == "column"){
+    if (grid.attacksetting == "column"){
         for (var i = 0; i < 10; i++){
           shotsFired.push([i,userSelection.y]);
         }
-    } else if (attacksetting == "row"){
+    } else if (grid.attacksetting == "row"){
         for (var j = 0; j < 10; j++){
           shotsFired.push([userSelection.x,j]);
         }
@@ -27,7 +27,31 @@ function createTargets(grid, userSelection, attacksetting){
     return shotsFired;
 }
 
+/*
+A function that will do the math of calculating hits misses etc.
+*/
+
+function calcShot(shotArray, userSelection, Grid) {
+      var shotArray = createTargets(userSelection, Grid);
+      /*This is an array that will stack up the hits and misses
+       and repeats*/
+      var tally = [0, 0, 0];
+      for(var i = 0; i < shotArray.length; i++){
+        for(var j = 0; j < shotArray[i].length){
+          if(Grid.grid[i][j] == 0){
+              // throw a miss
+          } else if(Grid.grid[i][j] == -1){
+            // throw a repeat hit
+          } else {
+            // throw a hit
+          }
+        }
+      }
+      return [Grid,tally];
+}
+
 
 module.exports = {
   createTargets: createTargets,
+  calcShot: calcShot,
 }

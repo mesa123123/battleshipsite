@@ -1,0 +1,40 @@
+@startuml
+
+skinparam packageStyle rectangle
+
+package "Battlefield"{
+  class Grid {
+    +attackSetting
+    +grid
+    +makeGrid()
+    +changeAttackSetting()
+  }
+}
+
+class "AttackScripts"{
+      +processShot(shotArray, grid)
+      +createShotArray(Selection, Grid)
+}
+
+package "UserCommands" {
+  class Selection {
+    +xValue
+    +yValue
+    +Constructor()
+  }
+}
+
+package "View" {
+  class Table {
+      +ConvertRows()
+      +ConvertData()
+  }
+}
+
+
+Grid <-> AttackScripts
+Grid --> AttackScripts
+Selection --> AttackScripts
+Table <-> Grid
+Table --> Selection
+@enduml

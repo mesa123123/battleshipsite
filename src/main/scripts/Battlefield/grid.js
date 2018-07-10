@@ -14,6 +14,7 @@ function makeGrid(){
   return grid;
 }
 
+
 function Grid() {
   this.attacksetting = "group",
   this.grid = makeGrid(),
