@@ -1,0 +1,13 @@
+@startuml
+
+[*] --> 0 : creation\nempty
+[*] --> 1 : creation\nship
+
+0 --> n3_Miss : shot by\nplayer
+1 --> n2_Hit : shot by\nplayer
+n2_Hit --> n1 : One Turn\nTime
+n3_Miss --> n1 : One Turn\nTime
+
+n1 --> [*] : endOfRound
+
+@enduml
